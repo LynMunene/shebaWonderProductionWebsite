@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheba Wonder Production | SWP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+      <div class="menu-toggle" id="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+    
+      <nav class="fullscreen-menu" id="fullscreen-menu">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul>
+          <li><a href="main.html">HOME</a></li>
+          <li><a href="#" class="dropdown-toggle" id="dropdown-toggle">PROJECTS <i class="fa fa-caret-down"></i></a>
+            <!--code for projects mini menu-->
+            <div class="dropdown-menu" id="dropdown-menu">
+              <ul>
+                <li><a href="brave_new_world_project.html" id="project_menu_item">BRAVE NEW WORLD</a></li>
+                <li><a href="exile_project.html" id="project_menu_item">EXILE</a></li>
+                <li><a href="turpentine_project.html" id="project_menu_item">TURPENTINE</a></li>
+                <li><a href="visual_art_project.html" id="project_menu_item">VISUAL ART</a></li>
+                <li><a href="beloved_project.html" id="project_menu_item">BELOVED BY GIBRAN KHALIL GIBRAN</a></li>
+                <li><a href="dreams_project.html" id="project_menu_item">DREAMS</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="bio.html">BIO</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main id="project_main">
+    <section id="project_landing_page"> 
+      <img src="images/exile_bg_img.jpeg" alt="Silhouette" width="100%">
+    </section>
+    <h1>EXILE - SHORT FILM</h1>
+    <div class="exile_bio">
+      <p>Helmholtz Watson is one of the most fascinating and complex characters in Aldous Huxley's Brave New World. Helmoltz is a physically perfect and intellectually gifted Alpha Plus, working primarily as a lecturer at the College of Emotional Engineering and also as a writer of hypnopaedic slogans and propaganda for the World State. Despite success and high status, Helmholtz feels deeply dissatisfied with the superficiality of the society. Helmholtz is intelligent enough to recognize that life under the World State suppresses true creativity, individuality, and deep emotional experience. Helmholtz wants to create art — especially powerful, meaningful writing — that actually conveys something profound, something real. However, the World State's values (where deep emotion and independent thought are considered dangerous) make this impossible. Helmholtz’s work is limited to hollow, government-approved slogans, which Helmholtz finds meaningless and suffocating. Helmholtz’s internal conflict eventually leads to punishment. Helmholtz even writes a poem about solitude — a concept forbidden in the World State.. As a result, the authorities decide to exile him to Iceland.</p> 
+    </div>
+
+    <!--add code for video player-->
+    <div class="exile_short_film_player">
+      <video src="images/Exile_w_Underwater_(1).mp4" controls width="60%" height="500px" ></video>
+      <p><span>TALENT LIST</span><br>
+        Written and directed by Sheba <br>
+        Cameraman - Logi Hilmarson <br>
+        Helmholtz Watson Played By Elin Vigdis Gudmunsdottir <br>
+        Location - Sudurlands Reykjavik - Iceland <br>
+      </p>
+    </div>
+    
+  </main>
+</body> 
+</html>
