@@ -1,223 +1,222 @@
-/* Reset & Base */
+/* Reset & Base - Mobile First Approach */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    background: #efebe8;
-    font-family: "Anton", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-
-  header {
-    position: relative;
-    padding: 1rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: transparent;
-    color: #333;
-  }
-  
-  /* Hamburger Icon */
-  .menu-toggle {
-    width: 30px;
-    cursor: pointer;
-    margin-left: 15px;
-  }
-
-  .menu-toggle .bar {
-    height: 4px;
-    background: #111;
-    color:#efebe8;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-
-  /* Fullscreen Menu */
-  .fullscreen-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #efebe8;
-    color: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transform: translateY(-100%);
-    transition: transform 0.5s ease-in-out;
-    z-index: 1000;
-  }
-
-  /* Close Button */
-  .close-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 3rem;
-    color: #111;
-    background: none;
-    border: none;
-    cursor: pointer;
-    line-height: 1;
-  }
-  .close-btn:hover {
-    color: #d60707;
-  }
-  .fullscreen-menu ul {
-    list-style: none;
-    text-align: center;
-  }
-  .fullscreen-menu li {
-    margin: 1rem 0;
-  }
-  .fullscreen-menu a {
-    color: #111;
-    text-decoration: none;
-    font-size: 48px;
-    transition: color 0.3s;
-  }
-  .fullscreen-menu a:hover {
-    color: #d60707;
-  }
-
-    /* Active Class to Show Menu */
-  .fullscreen-menu.active {
-    transform: translateY(0);
-  }
-  
-
-  /*Projects mini menu*/
-  .dropdown-menu {
-    display: none;
-    transition: transform 0.5s ease-in-out;
-  }
-  .dropdown-menu ul {
-    list-style: none;
-    text-align: center;
-  }
-  .dropdown-menu li {
-    margin: 1rem 0;
-  }
-  .dropdown-menu a {
-    color: #111;
-    text-decoration: none;
-    font-size: 48px;
-    transition: color 0.3s;
-  }
-  .dropdown-menu a:hover {
-    color: #d60707;
-  }
-  #project_menu_item {
-    font-size: 24px;
-    font-weight: 100;
-  }
-
-
-  /*Landing Page*/
-  #landing_page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 81vh;
-  }
-
-  #mobile_landing_page, #monile_landing_page img {
-    display: none;
-  }
-
-
-  #tablet_landing_page {
-    display: none;
-  }
-
-  #tablet_landing_page img {
-    display: none;
-  }
-
-#main h1 {
-  font-size: 64px;
-  font-weight: 300;
-  letter-spacing: -3px;
-  display: flex;
-  justify-content: flex-end;
-  align-items:center;
-  margin-top: -170px;
-  margin-right: 84px;
-  color: #0c0c0c;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
+html {
+  font-size: 16px;
+}
 
-/*footer*/
+body {
+  background: #efebe8;
+  font-family: "Anton", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+header {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: transparent;
+  color: #333;
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-toggle .bar {
+  height: 4px;
+  background: #111;
+  transition: all 0.4s ease;
+}
+
+/* Fullscreen Menu */
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #efebe8;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.fullscreen-menu.active {
+  transform: translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: clamp(2rem, 8vw, 3rem);
+  color: #111;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.5rem;
+}
+
+.close-btn:hover {
+  color: #d60707;
+}
+
+.fullscreen-menu ul {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+.fullscreen-menu li {
+  margin: 1.5rem 0;
+}
+
+.fullscreen-menu a {
+  color: #111;
+  text-decoration: none;
+  font-size: clamp(2rem, 8vw, 3rem);
+  transition: color 0.3s;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.fullscreen-menu a:hover {
+  color: #d60707;
+}
+
+/* Projects Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  transition: all 0.5s ease-in-out;
+  padding-top: 1rem;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+}
+
+.dropdown-menu li {
+  margin: 1rem 0;
+}
+
+.dropdown-menu a {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+}
+
+#project_menu_item {
+  position: relative;
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  font-weight: 100;
+  cursor: pointer;
+}
+
+/* Landing Page */
+#landing_page {
+  display: none; /* Hidden by default for mobile */
+  justify-content: center;
+  align-items: center;
+  min-height: 81vh;
+  padding: 2rem;
+}
+
+#main h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 300;
+  letter-spacing: -1px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2rem;
+  color: #0c0c0c;
+  text-align: center;
+}
+
+/* Footer */
 #footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 #footer p {
-  font-size: 24px;
+  font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
-
-/*general code for project pages hero section*/
+/* Project Pages General Styles */
 #project_main {
   display: flex;
   flex-direction: column;
 }
 
 #project_landing_page {
-  color:#efebe8;
+  color: #efebe8;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 81vh;
+  min-height: 81vh;
+  padding: 2rem;
 }
 
 #project_main h1 {
-  font-size: 64px;
+  font-size: clamp(2.5rem, 8vw, 4rem);
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  margin-top: -500px;
-  margin-bottom: 400px;
+  margin: 2rem 0;
   color: #111;
 }
 
-
-/*code for Visual Art Project*/
+/* Visual Art Project */
 .visual_art_bio {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -350px;
-  padding: 80px;
+  padding: 2rem;
 }
 
 .visual_art_bio p {
-  /*font-family: 'Work Sans', sans-serif;*/
-  font-size: 24px;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
   font-weight: 100;
   color: #111;
+  line-height: 1.6;
 }
 
 #visual_art_project {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: max-content;
-  justify-items: center;
-  margin: 150px 80px;
-  row-gap: 100px;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin: 3rem 1rem;
 }
 
 .art_card {
@@ -225,415 +224,252 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 24px;
+  gap: 1.5rem;
 }
 
 #visual_art_project .art_card img {
-  width: 350px;
-  height: 500px;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  aspect-ratio: 7/10;
+  object-fit: cover;
 }
 
 #visual_art_project .art_card p {
-  /*font-family: 'Work Sans', sans-serif;*/
-  font-size: 26px;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
   font-weight: 300;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
+  text-align: center;
+  width: 90%;
   color: #111;
 }
 
-
-/*brave new world*/
-.brave_new_world_bio {
+/* Brave New World Project */
+.brave_new_world_bio,
+.brave_new_world_bio_continued {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -350px;
-  padding: 80px;
+  padding: 2rem;
 }
 
-.brave_new_world_bio p {
+.brave_new_world_bio p,
+.brave_new_world_bio_continued p {
   font-family: 'Work Sans', sans-serif;
-  font-size: 24px;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
   font-weight: 500;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: #111;
+  line-height: 1.6;
 }
 
 .brave_new_world_bio p span {
   font-weight: 700;
 }
 
-.brave_new_world_bio_continued {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  padding: 80px;
-}
-
-.brave_new_world_bio_continued p {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: -1px;
-  color: #111;
-}
-
-
 .video_section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: max-content;
-  justify-content: center;
-  align-items: center;
-  column-gap: 32px;
-  row-gap: 64px;
-  margin: 0 124px;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem;
 }
 
 .video_clip {
-  width: 400px;
+  width: 100%;
 }
 
-/*exile page*/
+/* Exile Project */
 .exile_bio {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -350px;
-  padding: 64px;
+  padding: 2rem;
 }
 
 .exile_bio p {
-  /*font-family: 'Work Sans', sans-serif;*/
-  font-size: 20px;
+  font-size: clamp(1.1rem, 4vw, 1.25rem);
   letter-spacing: 0.4px;
   font-weight: 100;
   color: #111;
+  line-height: 1.6;
 }
 
 .exile_short_film_player {
-  margin: 80px;
+  margin: 2rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  column-gap: 64px;
-}
-
-.exile_short_film_player p span{
-  font-size: 32px;
+  gap: 2rem;
 }
 
 .exile_short_film_player p {
-  font-size: 24px;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  text-align: center;
 }
 
+.exile_short_film_player p span {
+  font-size: clamp(1.5rem, 6vw, 2rem);
+}
 
-/*about page*/
+/* About Page */
 #about_main {
   display: flex;
   flex-direction: column;
-
 }
 
 #about_landing_page {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 81vh;
+  min-height: 81vh;
+  padding: 2rem;
 }
 
-
 #about_main h1 {
-  font-size: 64px;
+  font-size: clamp(2.5rem, 8vw, 4rem);
   font-weight: 400;
-  letter-spacing: 3px;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  margin-top: -40vw;
-  margin-bottom: 10vw;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 2rem 0;
   color: #111;
 }
 
 .about_bio {
   display: flex;
-  padding: 72px;
+  padding: 2rem;
 }
 
 .about_bio p {
-  /*font-family: 'Work Sans', sans-serif;*/
-  font-size: 24px;
-  color:#111;
-  display: block;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  color: #111;
+  line-height: 1.6;
 }
 
-/*turpentine page*/
-  .turpentine-menu-toggle {
-    width: 30px;
-    cursor: pointer;
-  }
-  .turpentine-menu-toggle .bar {
-    height: 4px;
-    background: #111;
-    color:#111;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-#turpentine_main {
+/* Turpentine Page */
+.turpentine-menu-toggle {
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-#turpentine_landing_page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 85vh;
+.turpentine-menu-toggle .bar {
+  height: 4px;
+  background: #111;
+  transition: all 0.4s ease;
 }
 
-
-#turpentine_main h1 {
-  font-size: 64px;
-  font-weight: 400;
-  letter-spacing: 3px;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  margin-top: -500px;
-  margin-bottom: 400px;
-  color: #111;
-}
-
-
-/*responsiveness*/
-/*tablet*/
-@media only screen and (max-width: 992px) {
+/* ============================================ */
+/* Tablet Styles (768px and up) */
+/* ============================================ */
+@media (min-width: 768px) {
   #landing_page {
-    display: none;
+    display: flex;
   }
-
-  #landing_page img {
-    display: none;
-  }
-
-  #mobile_landing_page {
-    display:none;
-  }
-
-  #mobile_landing_page img {
-    display: none;
-  }
-
+  
+  #mobile_landing_page,
   #tablet_landing_page {
-    display: block;
-    margin-top: -100vh;
-  }
-
-  #tablet_landing_page img {
-    display: block;
-  }
-
-  #main h1 {
-    font-size: 7vw;
-    margin-right: 6px;
-    margin-top: -290px;
-    letter-spacing: -2px;
-  }
-
-  .menu-toggle {
-    width: 36px;
-    margin-left: 32px;
-    margin-top: 32px;
-  }
-
-  .menu-toggle .bar {
-    margin: 8px 0;
-  }
-
-  .close-btn {
-    margin-left: 32px;
-    margin-top: 32px;
-  }
-
-  #project_main h1 {
-    font-size: 9vw;
-    margin-top: -400px;
-    margin-bottom: 500px;
+    display: none;
   }
 
   #visual_art_project {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-content: center;;
-    margin: 24px;
-  }
-
-  .visual_art_bio p {
-    font-size: 32px;
-  }
-
-  .exile_bio p {
-    font-size: 32px;
-  }
-
-  .brave_new_world_bio p {
-    font-size: 32px;
-  }
-
-  .brave_new_world_bio_continued p {
-    font-size: 32px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 3rem 2rem;
+    gap: 4rem;
   }
 
   .video_section {
-    display: flex;
-    flex-direction: column;
-
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .exile_short_film_player {
-    margin: 40px;
-    flex-direction: column;
-    row-gap: 64px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
   }
 
   .exile_short_film_player video {
-    width: 100%;
-    height: 400px;
-  }
-
-  .exile_short_film_player p span {
-    font-size: 48px;
-  }
-
-  .exile_short_film_player p {
-    font-size: 32px;
-  }
-
-  #about_main h1 {
-    margin-top: -50vw;
-  }
-
-  .about_bio p {
-    display: block;
-    font-size: 32px;
+    max-width: 50%;
   }
 }
 
-
-/*mobile*/
-@media only screen and (max-width: 600px) {
-  .menu-toggle {
-    width: 6vw;
-    margin-top: 6vw;
-    margin-left: 24px;
-  }
-
-  .close-btn {
-    font-size: 3rem;
-    margin-top: 24px;
-    margin-left: 24px;
-  }
-
-  #landing_page {
-    display: none;
-  }
-
-  #landing_page img {
-    display: none;
-  }
-
-  #tablet_landing_page {
-    display: none;
-  }
-
-  #tablet_landing_page img {
-    display: none;
-  }
-
-  #mobile_landing_page {
-    display:flex;
-    margin-top: 12vw;
-  }
-
-  #mobile_landing_page img {
-    display: flex;
-    margin-top: -12vw;
-  }
-
+/* ============================================ */
+/* Desktop Styles (992px and up) */
+/* ============================================ */
+@media (min-width: 992px) {
   #main h1 {
-    font-size: 8vw;
-    margin-right: 2vw;
-    margin-top: -34vw;
-    letter-spacing: 0px;
-  }
-
-  #project_main h1 {
-    font-size: 9vw;
-    margin-top: -400px;
-    margin-bottom: 600px;
+    margin-top: -10rem;
+    margin-right: 5rem;
   }
 
   #visual_art_project {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-content: center;;
-    margin: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5rem 4rem;
+    gap: 5rem;
   }
 
-  .exile_short_film_player {
-    margin: 40px;
-    flex-direction: column;
-    row-gap: 64px;
+  .video_section {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 6rem;
   }
 
-  .exile_short_film_player video {
-    width: 100%;
-    height: 300px;
-  }
-
-  #about_main h1 {
-    margin-top: -180vw;
-  }
-
+  .visual_art_bio,
+  .brave_new_world_bio,
+  .brave_new_world_bio_continued,
+  .exile_bio,
   .about_bio {
-    margin-top: -10vw;
-  }
-  .about_bio p {
-    display: block;
-  }
-
-  .video_section {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .video_clip {
-    width: 350px;
+    padding: 4rem;
   }
 }
 
-/*code obtained from chatgpt below*/
- /* @media screen and (max-width: 1024px){
-      .body {max-width: 90%;}
-  @media screen and (max-width: 768px){
-      html {font-size: 7px;}
-      .body {
-          max-width: 90%;}
-      #main {margin-top: 6rem;}
-      #main .h1 { font-size: 1.6rem;}
-  } 
-  @media screen and (max-width: 480px){
-      html {font-size: 5.7px;}
-      .body {max-width: 95%;}
-      /* .container.card {margin-top: 2rem;} 
-      .subheading{font-size: 13px;}
-      #main .text { font-size: 12px;}
+/* ============================================ */
+/* Large Desktop Styles (1200px and up) */
+/* ============================================ */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
   }
-  }*/
+}
+
+/* ============================================ */
+/* Mobile Specific Adjustments (under 768px) */
+/* ============================================ */
+@media (max-width: 767px) {
+  #landing_page {
+    display: none;
+  }
+
+  #tablet_landing_page {
+    display: none;
+  }
+
+  #mobile_landing_page {
+    display: flex;
+    margin-top: 2rem;
+  }
+
+  .menu-toggle {
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .close-btn {
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  #main h1 {
+    margin-top: -15rem;
+    margin-right: 1rem;
+  }
+
+  #project_main h1 {
+    margin: 2rem 0;
+  }
+
+  #about_main h1 {
+    margin: 2rem 0;
+  }
+}
